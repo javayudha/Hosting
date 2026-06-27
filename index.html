@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Who's The Impostor?</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<div class="container">
+
+    <!-- HEADER -->
+
+    <div class="header">
+
+        <div class="logo">
+
+            🕵️
+
+        </div>
+
+        <h1>Who's The Impostor?</h1>
+
+        <p>
+            Temukan siapa impostornya sebelum mereka berhasil menyamar.
+        </p>
+
+    </div>
+
+    <!-- SETUP -->
+
+    <section id="setupPage" class="card">
+
+        <h2>
+            Pengaturan Game
+        </h2>
+
+        <div class="inputBox">
+
+            <label>Jumlah Pemain</label>
+
+            <input
+                type="number"
+                id="playerCount"
+                min="3"
+                max="20"
+                value="5">
+
+        </div>
+
+        <div class="inputBox">
+
+            <label>Jumlah Impostor</label>
+
+            <input
+                type="number"
+                id="impostorCount"
+                min="1"
+                max="5"
+                value="1">
+
+        </div>
+
+        <div class="inputBox">
+
+            <label>Kategori</label>
+
+            <select id="category">
+
+                <option value="random">
+
+                    🎲 Semua Kategori (Acak)
+
+                </option>
+
+            </select>
+
+        </div>
+
+        <!-- Nama pemain -->
+
+        <div class="playerWrapper">
+
+            <h3>
+
+                Nama Pemain
+
+            </h3>
+
+            <div id="playerList">
+
+            </div>
+
+        </div>
+
+        <button id="startGame">
+
+            <i class="fa-solid fa-play"></i>
+
+            Mulai Game
+
+        </button>
+
+    </section>
+
+    <!-- PLAYER PAGE -->
+
+    <section id="playerPage" class="card hidden">
+
+        <div class="playerTop">
+
+            <h2 id="playerTitle">
+
+                Pemain 1
+
+            </h2>
+
+            <span id="playerProgress">
+
+                1 / 5
+
+            </span>
+
+        </div>
+
+        <div class="instruction">
+
+            Pastikan hanya pemain ini yang melihat layar.
+
+        </div>
+
+        <div id="cardWord" class="wordCard">
+
+            <div class="cover">
+
+                Tekan tombol di bawah
+
+            </div>
+
+        </div>
+
+        <button id="showWord">
+
+            Lihat Kata
+
+        </button>
+
+        <button
+            id="nextPlayer"
+            class="hidden">
+
+            Pemain Berikutnya
+
+        </button>
+
+    </section>
+
+    <!-- FINISH -->
+
+    <section id="finishPage" class="card hidden">
+
+        <div class="finishIcon">
+
+            🎉
+
+        </div>
+
+        <h2>
+
+            Semua Pemain Sudah Melihat Kata
+
+        </h2>
+
+        <p>
+
+            Sekarang mulailah berdiskusi dan cari siapa impostornya.
+
+        </p>
+
+        <button id="restart">
+
+            Main Lagi
+
+        </button>
+
+    </section>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
