@@ -315,6 +315,10 @@ function startGame(){
     // ==========================
 
     const wordList = wordsData[selectedCategory];
+
+// Ambil semua kata yang belum pernah digunakan
+let availableWords = wordList.filter(word =>
+    !usedWords.includes(word.id)
 );
 
 // Jika semua kata dalam kategori sudah habis
@@ -325,25 +329,22 @@ if (availableWords.length === 0) {
     localStorage.removeItem("usedWords");
 
     availableWords = wordList;
+
 }
 
-// Pilih kata secara acak
- let availableWords = wordList.filter(word =>
-    !usedWords.includes(word.id)
-);
-
+// Pilih satu kata secara acak
 selectedPair = availableWords[
     random(availableWords.length)
 ];
 
-// Simpan ID
+// Simpan ID yang sudah digunakan
 usedWords.push(selectedPair.id);
 
 localStorage.setItem(
     "usedWords",
     JSON.stringify(usedWords)
 );
-
+ 
     // ==========================
     // ACAK IMPOSTOR
     // ==========================
@@ -621,6 +622,3 @@ document.body.addEventListener("touchmove",function(e){
 // ==========================
 
 console.log("Who's The Impostor Premium Loaded");
-
-usedWords.push(selectedPair.id);
-console.log(usedWords);
