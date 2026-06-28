@@ -315,10 +315,6 @@ function startGame(){
     // ==========================
 
     const wordList = wordsData[selectedCategory];
-
-// Kata yang belum pernah dipakai
-let availableWords = wordList.filter(word =>
-    !usedWords.includes(word.id)
 );
 
 // Jika semua kata dalam kategori sudah habis
@@ -332,6 +328,10 @@ if (availableWords.length === 0) {
 }
 
 // Pilih kata secara acak
+ let availableWords = wordList.filter(word =>
+    !usedWords.includes(word.id)
+);
+
 selectedPair = availableWords[
     random(availableWords.length)
 ];
