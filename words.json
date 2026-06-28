@@ -1,7 +1,9 @@
 {
   "hewan": [
-    { "id": 1, "civilian": "Kucing", "impostor": "Harimau" },
-    { "id": 2, "civilian": "Singa", "impostor": "Macan" },
+    { "id": 1,
+      "civilian": "Kucing", "impostor": "Harimau" },
+    { "id": 2,
+      "civilian": "Singa", "impostor": "Macan" },
   ],
 
   "makanan_indonesia": [
