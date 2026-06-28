@@ -562,33 +562,6 @@ window.addEventListener("load",()=>{
 
 });
 
-async function loadAPI(){
-
-    try{
-
-        const response=await fetch(API_URL);
-
-        wordsData=await response.json();
-
-        loadCategory();
-
-        startButton.disabled=false;
-
-        startButton.innerHTML="▶ Mulai Game";
-
-    }
-
-    catch(error){
-
-        alert("API tidak dapat dimuat.");
-
-        console.log(error);
-
-    }
-
-}
-
-
 // ==========================
 // ENTER KEY
 // ==========================
