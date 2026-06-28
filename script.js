@@ -50,6 +50,11 @@ let selectedCategory = "";
 
 let selectedPair = {};
 
+// Tambahkan ini
+let usedWords = JSON.parse(
+    localStorage.getItem("usedWords")
+) || [];
+
 let playerNames = [];
 
 let impostorIndexes = [];
@@ -59,7 +64,6 @@ let currentPlayer = 0;
 let totalPlayer = 0;
 
 let totalImpostor = 0;
-
 
 // ==========================
 // LOAD API
@@ -312,9 +316,33 @@ function startGame(){
 
     const wordList = wordsData[selectedCategory];
 
-    selectedPair = wordList[
-        random(wordList.length)
-    ];
+// Kata yang belum pernah dipakai
+let availableWords = wordList.filter(word =>
+    !usedWords.includes(word.id)
+);
+
+// Jika semua kata dalam kategori sudah habis
+if (availableWords.length === 0) {
+
+    usedWords = [];
+
+    localStorage.removeItem("usedWords");
+
+    availableWords = wordList;
+}
+
+// Pilih kata secara acak
+selectedPair = availableWords[
+    random(availableWords.length)
+];
+
+// Simpan ID
+usedWords.push(selectedPair.id);
+
+localStorage.setItem(
+    "usedWords",
+    JSON.stringify(usedWords)
+);
 
     // ==========================
     // ACAK IMPOSTOR
