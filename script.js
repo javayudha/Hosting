@@ -7,7 +7,7 @@
 // GANTI DENGAN URL API KAMU
 // ==========================
 
-const API_URL = "https://raw.githubusercontent.com/javayudha/Hosting/refs/heads/main/words.json";
+const API_URL = "https://raw.githubusercontent.com/javayudha/impostor_api/refs/heads/main/words.json";
 
 
 // ==========================
