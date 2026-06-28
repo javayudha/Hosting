@@ -621,3 +621,6 @@ document.body.addEventListener("touchmove",function(e){
 // ==========================
 
 console.log("Who's The Impostor Premium Loaded");
+
+usedWords.push(selectedPair.id);
+console.log(usedWords);
