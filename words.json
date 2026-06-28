@@ -2,24 +2,6 @@
   "hewan": [
     { "id": 1, "civilian": "Kucing", "impostor": "Harimau" },
     { "id": 2, "civilian": "Singa", "impostor": "Macan" },
-    { "id": 3, "civilian": "Gajah", "impostor": "Badak" },
-    { "id": 4, "civilian": "Kambing", "impostor": "Domba" },
-    { "id": 5, "civilian": "Sapi", "impostor": "Kerbau" },
-    { "id": 6, "civilian": "Ayam", "impostor": "Bebek" },
-    { "id": 7, "civilian": "Elang", "impostor": "Rajawali" },
-    { "id": 8, "civilian": "Buaya", "impostor": "Biawak" },
-    { "id": 9, "civilian": "Paus", "impostor": "Lumba-lumba" },
-    { "id": 10, "civilian": "Lele", "impostor": "Patin" },
-    { "id": 11, "civilian": "Nila", "impostor": "Mujair" },
-    { "id": 12, "civilian": "Merpati", "impostor": "Perkutut" },
-    { "id": 13, "civilian": "Burung Hantu", "impostor": "Elang" },
-    { "id": 14, "civilian": "Serigala", "impostor": "Rubah" },
-    { "id": 15, "civilian": "Panda", "impostor": "Koala" },
-    { "id": 16, "civilian": "Monyet", "impostor": "Gorila" },
-    { "id": 17, "civilian": "Kuda", "impostor": "Zebra" },
-    { "id": 18, "civilian": "Unta", "impostor": "Llama" },
-    { "id": 19, "civilian": "Rusa", "impostor": "Kijang" },
-    { "id": 20, "civilian": "Komodo", "impostor": "Biawak" }
   ],
 
   "makanan_indonesia": [
